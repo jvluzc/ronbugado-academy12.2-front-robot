@@ -3,7 +3,7 @@ Resource        ../resources/keywords_login.resource
 Resource        ../resources/keywords_users.resource
 Resource        ../resources/keywords_randomico.resource
 Test Setup      Abrir Navegador
-# Test Teardown   Fechar Navegador
+Test Teardown   Fechar Navegador
 
 Documentation   Tests Cases de CADASTRO e EDIÇÃO de Usuários
 
