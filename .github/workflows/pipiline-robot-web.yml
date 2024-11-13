@@ -1,0 +1,65 @@
+name: Robot Framework Tests WEB
+ 
+on: push
+ 
+jobs:
+  test_web:
+    name: Web Tests - Robot
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: https://jvluzc.github.io/ronbugado-academy12.2-front-robot/report.html
+
+    steps:
+      - name: Clonando para o Repositorio na Maquina Virtual
+        # run: echo clonando para o repositorio na maquina virtual
+        uses: actions/checkout@v4
+ 
+
+      - name: Instalação do Python
+        # run: echo Instalação da versão 3.12 do Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+ 
+
+      - name: Instalação das depedências do Projeto
+        # run: echo Instalação das depedências do Projeto
+        run: |
+          pip install setuptools
+          pip install robotframework
+          pip install robotframework-seleniumlibrary
+ 
+
+      - name: Executando os testes Web do Robot
+        # run: echo Executando os testes de API do Robot
+        run: |
+          robot --outputdir results/ tests/
+
+
+      - name: Salvando o Report dos Testes
+        # run: echo Salvando o Report dos Testes
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-framework-report
+          path: results/
+
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+ 
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: results/
+ 
+          
+      - name: Deploy to Github Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
