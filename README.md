@@ -4,7 +4,7 @@ Bem-vindo ao **Projeto de Automação Web** da **QA.Coders Academy T-12.2**! �
 
 ## 📜 Descrição
 
-Este projeto automatiza as funcionalidades de **login**, **usuários** e **empresa** através da interface frontend da aplicação **QA.Coders Academy**. Utilizando **Robot Framework** e **SeleniumLibrary**, o objetivo é garantir a precisão das funcionalidades essenciais, permitindo que os alunos testem interações de forma prática e eficiente. 🔍
+Este projeto automatiza as funcionalidades de **login**, **users** e **company** através da interface frontend da aplicação **QA.Coders Academy**. Utilizando **Robot Framework** e **SeleniumLibrary**, o objetivo é garantir a precisão das funcionalidades essenciais, permitindo que os alunos testem interações de forma prática e eficiente. 🔍
 
 ## ⚙️ Especificações
 
