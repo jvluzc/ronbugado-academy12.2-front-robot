@@ -101,6 +101,7 @@ Selecionar o botão "SALVAR" - Empresa
   Wait Until Element Is Visible     ${button_salvarNovo}
   Scroll Element Into View          ${button_salvarNovo}
   Execute JavaScript                document.body.style.zoom='80%'
+  Sleep    2
   Execute JavaScript                document.getElementById('save').click()
   Sleep    2
   Capture Page Screenshot

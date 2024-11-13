@@ -50,6 +50,7 @@ Selecionar o botão "SALVAR"
   Wait Until Element Is Visible     ${button_Salvar}
   Scroll Element Into View          ${button_Salvar}
   Execute JavaScript                document.body.style.zoom='80%'
+  Sleep    2
   Execute JavaScript                document.getElementById('save').click()
   Sleep    2
   Capture Page Screenshot
