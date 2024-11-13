@@ -2,7 +2,7 @@
 Resource        ../resources/keywords_login.resource
 Resource        ../resources/keywords_company.resource
 Resource        ../resources/keywords_randomico.resource
-# Test Setup      Abrir Navegador
+Test Setup      Abrir Navegador
 # Test Teardown   Fechar Navegador
 
 Documentation   Tests Cases de CADASTRO, EDIÇÃO (Dados e Endereço) e PESQUISA de empresas
