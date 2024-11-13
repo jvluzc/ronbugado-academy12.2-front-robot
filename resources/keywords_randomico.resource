@@ -19,12 +19,12 @@ Gerar Nome Completo
     ${nome_completo}=       Catenate    AAAA${primeira_palavra}  ${segunda_palavra}
     
     # Retornar o nome completo
-    [Return]    ${nome_completo}
+    RETURN    ${nome_completo}
 
 
 Gerar Numero de CPF randômico
     ${random_number}=    Generate Random String    11   [NUMBERS]
-    [Return]    ${random_number}
+    RETURN    ${random_number}
 
 Gerar E-mail Randômico (@dominio.com)
     # Gerar valor randômico de até 8 caracteres
@@ -34,7 +34,7 @@ Gerar E-mail Randômico (@dominio.com)
     ${email}=    Catenate    usuario123${valor_randomico}@teste.com
 
     # Retornar o e-mail gerado
-    [Return]    ${email}
+    RETURN    ${email}
 
 Gerar E-mail Randômico (@dominio.com.br)
     # Gerar valor randômico de até 8 caracteres
@@ -44,7 +44,7 @@ Gerar E-mail Randômico (@dominio.com.br)
     ${email}=    Catenate    usuario456${valor_randomico}@teste.com.br
 
     # Retornar o e-mail gerado
-    [Return]    ${email}
+    RETURN    ${email}
 
 
 # Dados Randomicos de Empresas
@@ -59,7 +59,7 @@ Gerar Razao Social
     ${nome_razaoSocial}=       Catenate    Razao${primeira_palavra}  123${segunda_palavra}
     
     # Retornar o nome completo
-    [Return]    ${nome_razaoSocial}
+    RETURN    ${nome_razaoSocial}
 
 
 Gerar Nome Fantasia
@@ -73,7 +73,7 @@ Gerar Nome Fantasia
     ${nome_fantasia}=       Catenate    Nome${primeira_palavra}  Fantasia123${segunda_palavra}
     
     # Retornar o nome completo
-    [Return]    ${nome_fantasia}
+    RETURN    ${nome_fantasia}
 
 Gerar E-mail Randômico (@company.com)
     # Gerar valor randômico de até 8 caracteres
@@ -83,7 +83,7 @@ Gerar E-mail Randômico (@company.com)
     ${email}=    Catenate    company123${valor_randomico}@teste.com
 
     # Retornar o e-mail gerado
-    [Return]    ${email}
+    RETURN    ${email}
 
 Gerar E-mail Randômico (@company.com.br)
     # Gerar valor randômico de até 8 caracteres
@@ -93,8 +93,8 @@ Gerar E-mail Randômico (@company.com.br)
     ${email}=    Catenate    company456${valor_randomico}@teste.com.br
 
     # Retornar o e-mail gerado
-    [Return]    ${email}
+    RETURN    ${email}
 
 Gerar Numero de CNPJ randômico
     ${random_cnpj}=    Generate Random String    14   [NUMBERS]
-    [Return]    ${random_cnpj}
+    RETURN    ${random_cnpj}
