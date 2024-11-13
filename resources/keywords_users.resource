@@ -112,4 +112,4 @@ Alerta de ERRO: CPF já cadastrado
 Armazenar valor inserido no campo CPF
   ${armazenaCPF}=    Get Value    locator=${input_CPF}
   Capture Page Screenshot
-  [Return]    ${armazenaCPF}
+  RETURN    ${armazenaCPF}
