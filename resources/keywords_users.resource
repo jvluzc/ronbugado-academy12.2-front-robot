@@ -32,6 +32,7 @@ Acessar tela de Usuários
 
 Cadastrar Novo Usuário
   [Arguments]    ${nomeCompleto}   ${email}    ${perfilAcesso}    ${cpf}    ${senha}    ${confirmarSenha}
+  Wait Until Element Is Visible     ${novoCadastro_button}
   Click Element                     ${novoCadastro_button}
   Wait Until Element Is Visible     ${modal_NovoCadastro}
   Execute JavaScript                document.body.style.zoom='80%'
@@ -111,6 +112,7 @@ Alerta de ERRO: CPF já cadastrado
   Capture Page Screenshot
 
 Armazenar valor inserido no campo CPF
+  Wait Until Element Is Visible   locator=${input_CPF}
   ${armazenaCPF}=    Get Value    locator=${input_CPF}
   Capture Page Screenshot
   RETURN    ${armazenaCPF}

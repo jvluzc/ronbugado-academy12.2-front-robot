@@ -61,6 +61,7 @@ Cadastrar Empresa - Dados
   ...    ${telefone}
   ...    ${descricaoDoServico}
   ...    ${NomeResponsável}
+  Wait Until Element Is Visible     ${novoCadastro_button}
   Click Element                     ${novoCadastro_button}
   Wait Until Element Is Visible     ${modal_NovaEmpresa}
   Execute JavaScript                document.body.style.zoom='80%'
@@ -86,6 +87,7 @@ Cadastrar Empresa - Endereco
   ...    ${numeroDoImovel}
   ...    ${complemento}
   Capture Page Screenshot
+  Wait Until Element Is Visible     ${input_cep}
   Input Text                        ${input_cep}                text=${cep}
   Input Text                        ${input_pais}               text=${pais}
   Input Text                        ${input_cidade}             text=${cidade}
@@ -129,6 +131,7 @@ Editar Empresa - Dados
   ...    ${telefone}
   ...    ${descricaoDoServico}
   ...    ${NomeResponsável}
+  Wait Until Element Is Visible     ${button_EditarEmpresa}
   Click Element                     ${button_EditarEmpresa}
   Wait Until Element Is Visible     ${modal_editarCadastro}
   Execute JavaScript                document.body.style.zoom='80%'
@@ -161,6 +164,7 @@ Editar Empresa - Endereco
   ...    ${rua}
   ...    ${numeroDoImovel}
   ...    ${complemento}
+  Wait Until Element Is Visible     ${button_EditarEmpresa}
   Click Element                     ${button_EditarEmpresa}
   Wait Until Element Is Visible     ${modal_editarCadastro}
   Execute JavaScript                document.body.style.zoom='80%'
