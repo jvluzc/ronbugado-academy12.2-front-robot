@@ -1,4 +1,4 @@
-# 🚀 Projeto de Automação de Testes Web com Robot Framework, Python, GitHub Actions e Pages
+# 🚀 Projeto de Automação de Testes Web com Robot Framework, GitHub Actions e Pages
 
 Bem-vindo ao **Projeto de Automação Web** da **QA.Coders Academy T-12.2**! 🎉
 
@@ -10,7 +10,7 @@ Este projeto automatiza as funcionalidades de **login**, **users** e **company**
 
 - **Aplicação alvo**: O frontend da aplicação web **QA.Coders Academy**.
 - **Ferramenta utilizada**: **Robot Framework** com a biblioteca **SeleniumLibrary**.
-- **Linguagem de teste**: Os testes são criados em **Robot Framework Syntax** e **Python**.
+- **Linguagem de teste**: Os testes são criados em **Robot Framework Syntax** e **SeleniumLibrary**.
 - **Integração contínua (CI/CD)**: Os testes são executados em uma pipeline CI/CD utilizando **GitHub Actions**.
 - **Relatórios**: Os resultados dos testes são publicados no **GitHub Pages** através do link: https://jvluzc.github.io/ronbugado-academy12.2-front-robot/report.html 📊
 
@@ -18,8 +18,9 @@ Este projeto automatiza as funcionalidades de **login**, **users** e **company**
 
 Antes de executar os testes, certifique-se de que você possui as seguintes dependências instaladas:
 
-- **Python**: Para instalar e executar as dependências do Robot Framework. 🐍
-- **Robot Framework** e **SeleniumLibrary**: Para executar a automação de testes. 💻
+- **Python 3.12**: Para instalar e executar as dependências do Robot Framework. 🐍
+- **Robot Framework** e **SeleniumLibrary**: Para executar a automação de testes.
+- **Git**: Para clonar este repositório. 💻
 
 Dependências do projeto:
 
