@@ -7,6 +7,7 @@ jobs:
     name: Web Tests - Robot
     runs-on: ubuntu-latest
 
+    # Permissões e Ambiente para disponibilizar o Reporte de Testes no GitHub Pages
     permissions:
       contents: read
       pages: write
@@ -16,19 +17,19 @@ jobs:
       url: https://jvluzc.github.io/ronbugado-academy12.2-front-robot/report.html
 
     steps:
-      - name: Clonando para o Repositorio na Maquina Virtual
+      - name: Etapa 1 - Clonar o Repositório do Projeto para a Máquina Virtual que o GitHub Actions roda os testes.
         # run: echo clonando para o repositorio na maquina virtual
         uses: actions/checkout@v4
  
 
-      - name: Instalação do Python
+      - name: Etapa 2 - Instalação do Python
         # run: echo Instalação da versão 3.12 do Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
  
 
-      - name: Instalação das depedências do Projeto
+      - name: Etapa 3 - Instalação das depedências do Projeto
         # run: echo Instalação das depedências do Projeto
         run: |
           pip install setuptools
@@ -36,13 +37,13 @@ jobs:
           pip install robotframework-seleniumlibrary
  
 
-      - name: Executando os testes Web do Robot
+      - name: Etapa 4 - Executar os testes Web do Robot Framework
         # run: echo Executando os testes de API do Robot
         run: |
           robot --outputdir results/ tests/
 
 
-      - name: Salvando o Report dos Testes
+      - name: Etapa 5 - Salvar o Report dos Testes que Foram Executados
         # run: echo Salvando o Report dos Testes
         uses: actions/upload-artifact@v4
         if: always()
@@ -51,17 +52,17 @@ jobs:
           path: results/
 
 
-      - name: Setup Pages
+      - name: Etapa 6 - Configurar e Habilitar o GitHub Pages para hospedar o conteúdo dos reportes dos testes
         uses: actions/configure-pages@v5
  
 
-      - name: Upload artifact
+      - name: Etapa 7 - Fazer o upload dos reportes de testes gerados
         uses: actions/upload-pages-artifact@v3
         if: always()
         with:
           path: results/
  
           
-      - name: Deploy to Github Pages
+      - name: Etapa 8 - Disponibilizar os reportes de teste no GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
