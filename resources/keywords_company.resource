@@ -42,7 +42,8 @@ ${modal_editarCadastro}    css=.css-1gibqcr
 *** Keywords ***
 Acessar tela de Empresas
   Wait Until Element Is Visible     xpath=//button[text()='Logout']
-  Execute JavaScript                document.querySelector('.css-11z55jn').click();
+  ${element}=    Get WebElement     css=.css-11z55jn
+  Click Element                     ${element}
   Wait Until Element Is Visible     locator=${empresa_select}
   Capture Page Screenshot
   Click Element                     locator=${empresa_select}
