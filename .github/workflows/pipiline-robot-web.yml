@@ -32,13 +32,14 @@ jobs:
           wget https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_131.0.6778.69-1_amd64.deb
           sudo apt-get install -y ./google-chrome-stable_131.0.6778.69-1_amd64.deb
           rm ./google-chrome-stable_131.0.6778.69-1_amd64.deb
-
-          # Baixar e configurar o ChromeDriver correspondente
-          CHROMEDRIVER_VERSION=$(google-chrome --version | awk '{print $3}')
-          wget https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip
+      
+          # Baixar o major version do ChromeDriver correspondente
+          CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d '.' -f 1) # Obter "131"
+          wget https://chromedriver.storage.googleapis.com/${CHROME_VERSION}/chromedriver_linux64.zip || exit 1
           unzip chromedriver_linux64.zip
           sudo mv chromedriver /usr/local/bin/
           rm chromedriver_linux64.zip
+        
  
       - name: Instalação das depedências do Projeto
         run: |
