@@ -13,7 +13,7 @@ ${entrar_button}    id=login
 Abrir Navegador
   # pra abir o navegador é só substituir a primeira linha abaixo por = Open Browser  browser=chrome
   # pra não abir o navegador é só substituir a primeira linha abaixo por = Open Browser    ${baseURL}    headlesschrome
-  Open Browser    ${baseURL}    headlesschrome
+  Open Browser    headlesschrome
   Maximize Browser Window
 
 Fechar Navegador
