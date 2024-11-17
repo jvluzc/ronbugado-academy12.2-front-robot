@@ -20,9 +20,9 @@ ${button_Cancelar}        id=cancel
 
 *** Keywords ***
 Acessar tela de Usuários
-  Wait Until Element Is Visible       locator=[tabindex='0']        timeout=40s
+  Wait Until Element Is Visible       locator=[role='button']        timeout=40s
   Capture Page Screenshot
-  Click Element                       locator=[tabindex='0']
+  Click Element                       locator=[role='button']
   Wait Until Element Is Visible       locator=${usuarios_select}    timeout=40s
   Capture Page Screenshot
   Click Element                       locator=${usuarios_select}
