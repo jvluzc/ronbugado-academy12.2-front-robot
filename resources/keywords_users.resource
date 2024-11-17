@@ -20,11 +20,11 @@ ${button_Cancelar}        id=cancel
 
 *** Keywords ***
 Acessar tela de Usuários
-  Wait Until Element Is Visible     xpath=//button[text()='Logout']
-  Click Element                     xpath=//span[text()='Cadastros']
-  Wait Until Element Is Visible     locator=${usuarios_select}
+  Wait Until Page Contains Element    xpath=//span[text()='Cadastros']    timeout=10s
+  Click Element                       xpath=//span[text()='Cadastros']
+  Wait Until Element Is Visible       locator=${usuarios_select}
   Capture Page Screenshot
-  Click Element                     locator=${usuarios_select}
+  Click Element                       locator=${usuarios_select}
   Sleep    2
   Capture Page Screenshot
   ${url_atual}=                    Get Location
@@ -116,3 +116,27 @@ Armazenar valor inserido no campo CPF
   ${armazenaCPF}=    Get Value    locator=${input_CPF}
   Capture Page Screenshot
   RETURN    ${armazenaCPF}
+
+
+Mensagem de ERRO: campo 'Senha' é obrigatório
+  Wait Until Element Is Visible     xpath=//div[text()='O campo senha é obrigatório']
+  Capture Page Screenshot
+
+
+Mensagem de ERRO: campo 'Senha' deve ter entre 8-12 caracteres
+  Wait Until Element Is Visible     xpath=//div[text()='Senha precisa ter: uma letra maiúscula, uma letra minúscula, um número, um caractere especial(@#$%) e tamanho entre 8-12.']
+  Capture Page Screenshot
+
+Mensagem de ERRO: campo 'Senha' deve ter letras maiusculas, minusculas, numeros e caracteres especiais
+  Wait Until Element Is Visible     xpath=//div[text()='Senha precisa ter: uma letra maiúscula, uma letra minúscula, um número, um caractere especial(@#$%) e tamanho entre 8-12.']
+  Capture Page Screenshot
+
+
+Mensagem de ERRO: campo 'Confirmar Senha' é obrigatório
+  Wait Until Element Is Visible     xpath=//div[text()='O campo de confirmação de senha é obrigatório.']
+  Capture Page Screenshot
+
+
+Mensagem de ERRO: campo 'Senha' e 'Confirmar Senha' não conferem
+  Wait Until Element Is Visible     xpath=//div[text()='As senhas não conferem.']
+  Capture Page Screenshot

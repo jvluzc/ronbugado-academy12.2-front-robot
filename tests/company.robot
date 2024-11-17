@@ -1422,6 +1422,20 @@ Documentation   Tests Cases de CADASTRO, EDIÇÃO (Dados e Endereço) e PESQUISA
     Alerta de Erro ao Preencher campo no Modal
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Tests Cases - Edição de Dados de Empresa Cadastrada
 
 
@@ -1902,6 +1916,19 @@ Documentation   Tests Cases de CADASTRO, EDIÇÃO (Dados e Endereço) e PESQUISA
      ...    abcdefghijabcdefghijabcdefghijabcdefghijabcdefghi jabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijy
     Selecionar o botão "SALVAR" - Empresa
     Alerta de Erro ao Preencher campo no Modal
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2457,6 +2484,17 @@ Documentation   Tests Cases de CADASTRO, EDIÇÃO (Dados e Endereço) e PESQUISA
      ...    %$#@@$$ 
     Selecionar o botão "SALVAR" - Empresa
     Alerta de Erro ao Preencher campo no Modal
+
+
+
+
+
+
+
+
+
+
+
 
 
 
