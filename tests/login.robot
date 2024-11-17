@@ -3,6 +3,7 @@ Resource        ../resources/keywords_login.resource
 Test Setup      Abrir Navegador
 Test Teardown   Fechar Navegador
 
+Documentation   Tests Cases de LOGIN
 
 *** Test Cases ***
 [CT1] - Login de usuário administrador com sucesso

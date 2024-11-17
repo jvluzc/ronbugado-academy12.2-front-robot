@@ -45,6 +45,7 @@ jobs:
       - name: Salvando o Report dos Testes
         # run: echo Salvando o Report dos Testes
         uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: robot-framework-report
           path: results/
@@ -55,7 +56,8 @@ jobs:
  
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@
+        if: always()
         with:
           path: results/
  
