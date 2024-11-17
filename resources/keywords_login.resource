@@ -14,7 +14,7 @@ Abrir Navegador
   # pra abir o navegador é só substituir a primeira linha abaixo por = Open Browser  browser=chrome
   # pra não abir o navegador é só substituir a primeira linha abaixo por = Open Browser    ${baseURL}    headlesschrome
   Open Browser    ${baseURL}    headlesschrome
-  Maximize Browser Window
+  #Maximize Browser Window
 
 Fechar Navegador
   Close Browser
