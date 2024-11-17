@@ -41,8 +41,8 @@ ${modal_editarCadastro}    css=.css-1gibqcr
 
 *** Keywords ***
 Acessar tela de Empresas
-  Wait Until Page Contains Element    xpath=//span[text()='Cadastros']    timeout=10s
-  Click Element                       xpath=//span[text()='Cadastros']
+  Wait Until Page Contains Element    css=.css-11z55jn    timeout=10s
+  Click Element                       css=.css-11z55jn
   Wait Until Element Is Visible       locator=${empresa_select}
   Capture Page Screenshot
   Click Element                       locator=${empresa_select}
