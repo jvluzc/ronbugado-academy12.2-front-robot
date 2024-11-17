@@ -41,10 +41,17 @@ ${modal_editarCadastro}    css=.css-1gibqcr
 
 *** Keywords ***
 Acessar tela de Empresas
+<<<<<<< HEAD
   Wait Until Element Is Visible       locator=.css-11z55jn        timeout=50s
   Capture Page Screenshot
   Click Element                       locator=.css-11z55jn
   Wait Until Element Is Visible       locator=${empresa_select}      timeout=50s
+=======
+  Wait Until Element Is Visible       locator=[role='button']        timeout=40s
+  Capture Page Screenshot
+  Click Element                       locator=[role='button']
+  Wait Until Element Is Visible       locator=${empresa_select}      timeout=40s
+>>>>>>> 90d22019acfb4488c33d08d9173e9580a2335142
   Capture Page Screenshot
   Click Element                       locator=${empresa_select}
   Sleep    2
