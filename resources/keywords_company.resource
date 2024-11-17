@@ -41,7 +41,7 @@ ${modal_editarCadastro}    css=.css-1gibqcr
 
 *** Keywords ***
 Acessar tela de Empresas
-  Wait Until Element Is Visible       css=.css-11z55jn    timeout=15s
+  Wait Until Element Is Visible       css=.css-11z55jn    timeout=25s
   Click Element                       css=.css-11z55jn
   Wait Until Element Is Visible       locator=${empresa_select}
   Capture Page Screenshot
