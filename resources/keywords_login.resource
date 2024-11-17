@@ -20,7 +20,7 @@ Fechar Navegador
   Close Browser
 
 Acessar tela de login
-  #Go To    url=${baseURL}
+  Go To    url=${baseURL}
   Wait Until Element Is Visible    locator=${email_imput}
   Capture Page Screenshot
   
