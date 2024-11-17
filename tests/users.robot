@@ -5,11 +5,9 @@ Resource        ../resources/keywords_randomico.resource
 Test Setup      Abrir Navegador
 Test Teardown   Fechar Navegador
 
-Documentation   Tests Cases de Cadastros de Usuários
+Documentation   Tests Cases de CADASTRO e EDIÇÃO de Usuários
 
 *** Test Cases ***
-
-# Tests Cases - Cadastro de Usuário
 
 [CT1] - Cadastrar usuário com dados válidos (caminho feliz)
     ${nomeCompleto}=     Gerar Nome Completo
@@ -469,114 +467,4 @@ Documentation   Tests Cases de Cadastros de Usuários
     Alerta de ERRO: CPF já cadastrado
 
 
-[CT23] - Cadastrar com campo "Senha" vazio
-    ${nomeCompleto}=     Gerar Nome Completo
-    ${cpf}=              Gerar Numero de CPF randômico
-    ${email}=            Gerar E-mail Randômico (@dominio.com.br)
-    Acessar tela de login
-    Digitar e-mail e senha    
-    ...    sysadmin@qacoders.com    
-    ...    1234@Test
-    Clicar no botão ENTRAR
-    Validar login com sucesso no sistema
-    Acessar tela de Usuários
-    Cadastrar Novo Usuário    
-    ...    ${nomeCompleto}
-    ...    ${email}    
-    ...    ADMIN    
-    ...    ${cpf} 
-    ...          
-    ...    abcd3fgH#
-    Selecionar o botão "SALVAR"
-    Mensagem de ERRO: 'Senha' Obrigatória
-
-
-[CT24] - Cadastrar com campo "Senha" contendo mais de 12 caracteres
-    ${nomeCompleto}=     Gerar Nome Completo
-    ${cpf}=              Gerar Numero de CPF randômico
-    ${email}=            Gerar E-mail Randômico (@dominio.com.br)
-    Acessar tela de login
-    Digitar e-mail e senha    
-    ...    sysadmin@qacoders.com    
-    ...    1234@Test
-    Clicar no botão ENTRAR
-    Validar login com sucesso no sistema
-    Acessar tela de Usuários
-    Cadastrar Novo Usuário    
-    ...    ${nomeCompleto}
-    ...    ${email}    
-    ...    ADMIN    
-    ...    ${cpf}   
-    ...    Ab1#123456789   
-    ...    Ab1#123456789
-    Selecionar o botão "SALVAR"
-    Mensagem de ERRO: 'Senha' precisa ter entre 8-12 caracteres
-
-
-
-[CT25] - Cadastrar com campo "Senha" sem caracteres obrigatórios (ex: Números)
-    ${nomeCompleto}=     Gerar Nome Completo
-    ${cpf}=              Gerar Numero de CPF randômico
-    ${email}=            Gerar E-mail Randômico (@dominio.com.br)
-    Acessar tela de login
-    Digitar e-mail e senha    
-    ...    sysadmin@qacoders.com    
-    ...    1234@Test
-    Clicar no botão ENTRAR
-    Validar login com sucesso no sistema
-    Acessar tela de Usuários
-    Cadastrar Novo Usuário    
-    ...    ${nomeCompleto}
-    ...    ${email}    
-    ...    ADMIN    
-    ...    ${cpf}   
-    ...    abcdefgH#    
-    ...    abcdefgH#
-    Selecionar o botão "SALVAR"
-    Mensagem de ERRO: 'Senha' sem caractere obrigatório
-    
-
-
-[CT26] - Cadastrar com campo "Confirmar Senha" vazio
-    ${nomeCompleto}=     Gerar Nome Completo
-    ${cpf}=              Gerar Numero de CPF randômico
-    ${email}=            Gerar E-mail Randômico (@dominio.com.br)
-    Acessar tela de login
-    Digitar e-mail e senha    
-    ...    sysadmin@qacoders.com    
-    ...    1234@Test
-    Clicar no botão ENTRAR
-    Validar login com sucesso no sistema
-    Acessar tela de Usuários
-    Cadastrar Novo Usuário    
-    ...    ${nomeCompleto}
-    ...    ${email}    
-    ...    ADMIN    
-    ...    ${cpf}   
-    ...    abcd3fgH#    
-    ...    
-    Selecionar o botão "SALVAR"
-    Mensagem de ERRO: 'Confirmar Senha' Obrigatória
-
-
-[CT27] - Cadastrar com campo "Confirmar Senha" diferente do campo "Senha"
-    ${nomeCompleto}=     Gerar Nome Completo
-    ${cpf}=              Gerar Numero de CPF randômico
-    ${email}=            Gerar E-mail Randômico (@dominio.com.br)
-    Acessar tela de login
-    Digitar e-mail e senha    
-    ...    sysadmin@qacoders.com    
-    ...    1234@Test
-    Clicar no botão ENTRAR
-    Validar login com sucesso no sistema
-    Acessar tela de Usuários
-    Cadastrar Novo Usuário    
-    ...    ${nomeCompleto}
-    ...    ${email}    
-    ...    ADMIN    
-    ...    ${cpf}   
-    ...    abcd3fgH#    
-    ...    Abcd4fgH#
-    Selecionar o botão "SALVAR"
-    Mensagem de ERRO: 'Senha' e 'Confirmar Senha' não conferem
-
+#robot -d results .\tests\users.Cadastrar.robot
