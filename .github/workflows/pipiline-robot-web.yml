@@ -56,7 +56,8 @@ jobs:
  
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@
+        uses: actions/upload-pages-artifact@4
+        if: always()
         with:
           path: results/
  
