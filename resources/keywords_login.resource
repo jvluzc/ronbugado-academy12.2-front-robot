@@ -13,14 +13,14 @@ ${entrar_button}    id=login
 Abrir Navegador
   # pra abir o navegador é só substituir a primeira linha abaixo por = Open Browser  browser=chrome
   # pra não abir o navegador é só substituir a primeira linha abaixo por = Open Browser    ${baseURL}    headlesschrome
-  Open Browser    headlesschrome
+  Open Browser    ${baseURL}    headlesschrome
   Maximize Browser Window
 
 Fechar Navegador
   Close Browser
 
 Acessar tela de login
-  Go To    url=${baseURL}
+  #Go To    url=${baseURL}
   Wait Until Element Is Visible    locator=${email_imput}
   Capture Page Screenshot
   
