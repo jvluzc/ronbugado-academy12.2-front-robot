@@ -70,4 +70,4 @@ Validar redirecionamento para página "Primeiro acesso / Acesse aqui"
   Sleep    5
   Capture Page Screenshot
   ${url_atual}=    Get Location
-  Should Not Be Equal    ${url_atual}    ${baseURL}
+  Should Not Be Equal    ${url_atual}    ${baseURL} 
