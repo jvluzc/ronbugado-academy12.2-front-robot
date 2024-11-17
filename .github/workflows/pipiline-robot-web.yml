@@ -28,18 +28,22 @@ jobs:
         run: |
           # Instalar uma versão específica do Chrome
           sudo apt-get update
-          sudo apt-get install -y wget
+          sudo apt-get install -y wget unzip
           wget https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_131.0.6778.69-1_amd64.deb
           sudo apt-get install -y ./google-chrome-stable_131.0.6778.69-1_amd64.deb
           rm ./google-chrome-stable_131.0.6778.69-1_amd64.deb
       
-          # Baixar o major version do ChromeDriver correspondente
-          CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d '.' -f 1) # Obter "131"
-          wget https://chromedriver.storage.googleapis.com/${CHROME_VERSION}/chromedriver_linux64.zip || exit 1
+          # Identificar a versão do Chrome e instalar o ChromeDriver correspondente
+          CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d '.' -f 1)
+          DRIVER_VERSION=$(wget -qO- https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROME_VERSION})
+          wget https://chromedriver.storage.googleapis.com/${DRIVER_VERSION}/chromedriver_linux64.zip || exit 1
           unzip chromedriver_linux64.zip
           sudo mv chromedriver /usr/local/bin/
           rm chromedriver_linux64.zip
-        
+      
+          # Verificar versões instaladas
+          google-chrome --version
+          chromedriver --version
  
       - name: Instalação das depedências do Projeto
         run: |
