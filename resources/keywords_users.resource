@@ -20,7 +20,7 @@ ${button_Cancelar}        id=cancel
 
 *** Keywords ***
 Acessar tela de Usuários
-  Wait Until Element Is Visible       css=.css-11z55jn    timeout=10s
+  Wait Until Element Is Visible       css=.css-11z55jn    timeout=15s
   Click Element                       css=.css-11z55jn
   Wait Until Element Is Visible       locator=${usuarios_select}
   Capture Page Screenshot
