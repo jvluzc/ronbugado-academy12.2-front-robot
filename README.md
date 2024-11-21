@@ -46,8 +46,8 @@ Dependências do projeto:
 
 ## 👨‍💻 Equipe
 - Raphaela Teada
-- Wayslan
-- Sonia Izabel
-- Loisy
-- João Vitor
-- Vanderson Oliveira
+- Wayslan Miranda
+- Sonia Izabel Wicki
+- Loisy Dias
+- João Vitor Condidorio
+- Vanderson Oliveira 
